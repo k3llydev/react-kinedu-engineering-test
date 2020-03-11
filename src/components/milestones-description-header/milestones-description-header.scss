@@ -1,0 +1,94 @@
+@import '../../main.scss';
+
+%HeaderBase {
+    width: 100%;
+    min-height: 300px;
+    text-align: center;
+    color: $complementary-color;
+    h1 {
+        padding-top: 1rem;
+    }
+}
+
+%ButtonBase {
+    border: 1px solid $complementary-color;
+    background: transparent;
+    margin: 0;
+    padding: rem(12px) rem(16px);
+    color: $complementary-color;
+    min-width: rem(120px);
+    font-size: rem(12px);
+    font-family: 'GothamRoundedBold';
+}
+
+.ButtonsContainer {
+    button:first-of-type {
+        border-radius: 15px 0 0 15px;
+    }
+    button:last-of-type {
+        border-radius: 0 15px 15px 0;
+    }
+    padding-bottom: rem(16px);
+}
+
+.ActiveButton {
+    background: white;
+}
+
+.ButtonPhysicalArea {
+    @extend %ButtonBase;
+}
+
+.ButtonEmotionalArea {
+    @extend %ButtonBase;
+}
+
+
+
+
+/* Headers backgrounds */
+.PhysicalArea {
+    @extend %HeaderBase;
+    background: $physical-area-background;
+    button.ActiveButton {
+        color: $physical-area-background;
+    }
+}
+.EmotionalArea {
+    @extend %HeaderBase;
+    background: $social-emotional-area-background;
+    button.ActiveButton {
+        color: $social-emotional-area-background;
+    }
+}
+
+
+
+
+
+
+
+
+.Divider {
+    border: 0.5px solid $complementary-color;
+    width: 27rem;
+    margin-bottom: rem(16px);
+}
+
+.Description {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.4;
+    padding-bottom: rem(32px);
+}
+
+.TopHeader {
+    font-family: 'GothamRoundedMedium';
+    padding-top: rem(16px);
+    padding-bottom: rem(4px);
+}
+
+.MainHeader {
+    font-family: 'GothamRoundedMedium';
+    padding-bottom: rem(16px);
+}
