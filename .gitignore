@@ -1,0 +1,12 @@
+# Misc
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Build directory
+dist/
+
+# Unit tests directory
+coverage/
+__snapshots__
