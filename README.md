@@ -19,6 +19,10 @@ npm run build:dev
 
 > For production, simply change `:dev` with `:prod`
 
+
+**NOTE:**
+In order for the application to work properly, you must provide an API key in `src/app.js` file.
+
 ## Techincal documentation
 
 Dependencies:

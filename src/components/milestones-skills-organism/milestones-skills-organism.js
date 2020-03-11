@@ -11,6 +11,10 @@ class MilestonesSkillsOrganism extends Component {
         }
     }
 
+    /**
+     * Handles state based on new props
+     * @param {Object} nextProps 
+     */
     componentWillReceiveProps(nextProps) {
         this.setState({
             milestones: nextProps.milestones,
@@ -18,6 +22,10 @@ class MilestonesSkillsOrganism extends Component {
         });  
     }
 
+    /**
+     * Handles the class that should be visible at the displayed milestone
+     * @param {Boolean} answer 
+     */
     _milestoneClass(answer) {
         if(answer === null) {
             return styles.NotAnswered
@@ -25,6 +33,10 @@ class MilestonesSkillsOrganism extends Component {
         return answer ? styles.Completed : styles.Uncompleted;
     }
 
+    /**
+     * Handles the title for the currently shown milestone
+     * @param {Boolean} answer 
+     */
     _milestoneTitle(answer) {
         if(answer === null) {
             return 'Not answered';
@@ -32,6 +44,9 @@ class MilestonesSkillsOrganism extends Component {
         return answer ? 'Completed' : 'Uncompleted';
     }
 
+    /**
+     * Rendering milestones
+     */
     _milestoneRows() {
         const {changedMilestoneStatus, achievedRange} = this.props;
         const {milestones} = this.state;
